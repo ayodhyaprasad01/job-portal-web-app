@@ -1,0 +1,5 @@
+package com.bytecode.jobportal.controller;
+
+public class HomeController {
+
+}

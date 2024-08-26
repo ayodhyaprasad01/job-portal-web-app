@@ -1,0 +1,5 @@
+package com.bytecode.jobportal.entity;
+
+public class Users {
+
+}

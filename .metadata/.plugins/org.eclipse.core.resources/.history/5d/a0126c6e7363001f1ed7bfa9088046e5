@@ -1,0 +1,10 @@
+package com.bytecode.jobportal.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="users_type")
+public class UsersType {
+
+}

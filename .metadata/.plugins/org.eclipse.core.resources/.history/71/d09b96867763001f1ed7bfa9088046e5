@@ -1,0 +1,5 @@
+package com.bytecode.jobportal.repository;
+
+public interface UsersRepository {
+
+}
