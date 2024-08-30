@@ -1,6 +1,6 @@
 package com.bytecode.jobportal.entity;
 
-import java.sql.Date;
+import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -20,7 +20,7 @@ import jakarta.validation.constraints.NotEmpty;
 public class Users {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int userId;
 	
 	@Column(unique=true)

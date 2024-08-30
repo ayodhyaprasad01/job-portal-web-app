@@ -1,4 +1,4 @@
-package com.bytecode.jobportal.entity.services;
+package com.bytecode.jobportal.services;
 
 import java.util.List;
 
@@ -20,3 +20,4 @@ public class UsersTypeService {
 		return usersTypeRepository.findAll();
 	}
 }
+
