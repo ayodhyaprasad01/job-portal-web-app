@@ -7,16 +7,17 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.MapsId;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name="recruiter_profile")
 public class RecruiterProfile {
 
 	@Id
-	private int UesrAccountId;
+	private int userAccountId;
 	
 	@OneToOne
-	@JoinColumn(name="user_id")
+	@JoinColumn(name="user_account_id")
 	@MapsId
 	private Users userId;
 	
@@ -26,6 +27,7 @@ public class RecruiterProfile {
 	private String state;
 	private String country;
 	private String company;
+	
 	@Column(nullable=true,length=64)
 	private String profilePhoto;
 	
@@ -39,7 +41,7 @@ public class RecruiterProfile {
 
 	public RecruiterProfile(int uesrAccountId, Users userId, String firstName, String lastName, String city,
 			String state, String country, String company, String profilePhoto) {
-		UesrAccountId = uesrAccountId;
+		userAccountId = uesrAccountId;
 		this.userId = userId;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -52,14 +54,22 @@ public class RecruiterProfile {
 
 
 
-	public int getUesrAccountId() {
-		return UesrAccountId;
+	public RecruiterProfile(Users users) {
+			
+		this.userId=users;
+
 	}
 
 
 
-	public void setUesrAccountId(int uesrAccountId) {
-		UesrAccountId = uesrAccountId;
+	public int getUserAccountId() {
+		return userAccountId;
+	}
+
+
+
+	public void setUserAccountId(int uesrAccountId) {
+		userAccountId = uesrAccountId;
 	}
 
 
@@ -159,11 +169,17 @@ public class RecruiterProfile {
 	}
 
 
+	@Transient
+	public String getPhotosImagePath() {
+		
+		if(profilePhoto==null) return null;
+		return "/photos/recruiter/" + userAccountId + "/" + profilePhoto;
+	}
 
 	@Override
 	public String toString() {
 		return 
-				"RecruiterProfile [UesrAccountId=" + UesrAccountId + ", userId=" + userId + ", firstName=" + firstName
+				"RecruiterProfile [userAccountId=" + userAccountId + ", userId=" + userId + ", firstName=" + firstName
 				+ ", lastName=" + lastName + ", city=" + city + ", state=" + state + ", country=" + country
 				+ ", company=" + company + ", profilePhoto=" + profilePhoto + "]";
 	}

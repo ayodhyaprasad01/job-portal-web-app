@@ -44,7 +44,6 @@ public class Users {
 
 	public Users(int userId, String email, @NotEmpty String password, boolean isActive, Date registrationDate,
 			UsersType userTypeId) {
-		super();
 		this.userId = userId;
 		this.email = email;
 		this.password = password;
