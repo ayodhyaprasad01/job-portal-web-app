@@ -1,6 +1,5 @@
 package com.bytecode.jobportal.entity;
 
-import java.util.Date;
 
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -13,6 +12,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Transient;
+
+import java.sql.Date;
 
 @Entity
 public class JobPostActivity {

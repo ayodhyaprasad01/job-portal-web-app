@@ -1,7 +1,5 @@
 package com.bytecode.jobportal.entity;
 
-import java.util.Date;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.CascadeType;
@@ -14,6 +12,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotEmpty;
+
+import java.sql.Date;
 
 @Entity
 @Table(name="users")

@@ -1,6 +1,5 @@
 package com.bytecode.jobportal.services;
 
-import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +17,8 @@ import com.bytecode.jobportal.entity.Users;
 import com.bytecode.jobportal.repository.JobSeekerProfileRepository;
 import com.bytecode.jobportal.repository.RecruiterProfileRepository;
 import com.bytecode.jobportal.repository.UsersRepository;
+
+import java.sql.Date;
 
 @Service
 public class UsersService {
