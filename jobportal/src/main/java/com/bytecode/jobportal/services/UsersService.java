@@ -22,6 +22,7 @@ import java.sql.Date;
 
 @Service
 public class UsersService {
+	
 	private final UsersRepository usersRepository;
 	private final JobSeekerProfileRepository jobSeekerProfileRepository;
 	private final RecruiterProfileRepository recruiterProfileRepositry;
@@ -40,6 +41,7 @@ public class UsersService {
 	}
 	
 	public Users addNew(Users users) {
+		
 		users.setActive(true);
 		users.setRegistrationDate(new Date(System.currentTimeMillis()));
 		users.setPassword(passwordEncoder.encode(users.getPassword()));
@@ -54,10 +56,6 @@ public class UsersService {
 		}
 		
 		return savedUser;
-	}
-
-	public Optional<Users> getUserByEmail(String email){
-		return usersRepository.findByEmail(email);
 	}
 
 	public Object getCurrentUserProfile() {
@@ -95,4 +93,15 @@ public class UsersService {
 		return null;
 	
 }
+	
+	public Users findByEmail(String currentUsername) {
+        return usersRepository.findByEmail(currentUsername).orElseThrow(() -> new UsernameNotFoundException("User not " +
+                "found"));
+    }
+	
+	public Optional<Users> getUserByEmail(String email){
+		return usersRepository.findByEmail(email);
+	}
+
+
 }

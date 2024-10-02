@@ -11,163 +11,173 @@ import jakarta.persistence.MapsId;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
-@Table(name="job_seeker_profile")
+@Table(name = "job_seeker_profile")
 public class JobSeekerProfile {
-	
-	@Id
-	private int userAccountId;
-	
-	@OneToOne
-	@JoinColumn(name="user_account_id",referencedColumnName="userId")
-	@MapsId
-	private Users userId;
-	
-	private String firstName;
-	private String lastName;
-	private String city;
-	private String state;
-	private String country;
-	private String workAuthorization;
-	private String employmentType;
-	private String resume;
-	
-	@Column(nullable=true,length=64)
-	private String profilePhoto;
-	
-	@OneToMany(targetEntity=Skills.class,cascade=CascadeType.ALL,mappedBy="jobSeekerProfile")
-	private List<Skills> skills;
 
-	public JobSeekerProfile() {	
-	}
+    @Id
+    private Integer userAccountId;
 
-	public JobSeekerProfile(Users userId) {
-		this.userId = userId;
-	}
+    @OneToOne
+    @JoinColumn(name = "user_account_id")
+    @MapsId
+    private Users userId;
 
-	public JobSeekerProfile(int userAccountId, Users userId, String firstName, String lastName, String city, String state,
-			String country, String workAuthorization, String employmentType, String resume, String profilePhoto,
-			List<Skills> skills) {
+    private String firstName;
+    private String lastName;
+    private String city;
+    private String state;
+    private String country;
+    private String workAuthorization;
+    private String employmentType;
+    private String resume;
 
-		this.userAccountId = userAccountId;
-		this.userId = userId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.city = city;
-		this.state = state;
-		this.country = country;
-		this.workAuthorization = workAuthorization;
-		this.employmentType = employmentType;
-		this.resume = resume;
-		this.profilePhoto = profilePhoto;
-		this.skills = skills;
-	}
+    @Column(nullable = true, length = 64)
+    private String profilePhoto;
 
-	public int getUserAccount() {
-		return userAccountId;
-	}
+    @OneToMany(targetEntity = Skills.class, cascade = CascadeType.ALL, mappedBy = "jobSeekerProfile")
+    private List<Skills> skills;
 
-	public void setUserAccount(int userAccountId) {
-		this.userAccountId = userAccountId;
-	}
+    public JobSeekerProfile() {
+    }
 
-	public Users getUserId() {
-		return userId;
-	}
+    public JobSeekerProfile(Users userId) {
+        this.userId = userId;
+    }
 
-	public void setUserId(Users userId) {
-		this.userId = userId;
-	}
+    public JobSeekerProfile(Integer userAccountId, Users userId, String firstName, String lastName, String city, String state, String country, String workAuthorization, String employmentType, String resume, String profilePhoto, List<Skills> skills) {
+        this.userAccountId = userAccountId;
+        this.userId = userId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.workAuthorization = workAuthorization;
+        this.employmentType = employmentType;
+        this.resume = resume;
+        this.profilePhoto = profilePhoto;
+        this.skills = skills;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public Integer getUserAccountId() {
+        return userAccountId;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public void setUserAccountId(Integer userAccountId) {
+        this.userAccountId = userAccountId;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public Users getUserId() {
+        return userId;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public void setUserId(Users userId) {
+        this.userId = userId;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public String getState() {
-		return state;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setState(String state) {
-		this.state = state;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public String getCountry() {
-		return country;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public void setCountry(String country) {
-		this.country = country;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public String getWorkAuthorization() {
-		return workAuthorization;
-	}
+    public String getState() {
+        return state;
+    }
 
-	public void setWorkAuthorization(String workAuthorization) {
-		this.workAuthorization = workAuthorization;
-	}
+    public void setState(String state) {
+        this.state = state;
+    }
 
-	public String getEmploymentType() {
-		return employmentType;
-	}
+    public String getCountry() {
+        return country;
+    }
 
-	public void setEmploymentType(String employmentType) {
-		this.employmentType = employmentType;
-	}
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
-	public String getResume() {
-		return resume;
-	}
+    public String getWorkAuthorization() {
+        return workAuthorization;
+    }
 
-	public void setResume(String resume) {
-		this.resume = resume;
-	}
+    public void setWorkAuthorization(String workAuthorization) {
+        this.workAuthorization = workAuthorization;
+    }
 
-	public String getProfilePhoto() {
-		return profilePhoto;
-	}
+    public String getEmploymentType() {
+        return employmentType;
+    }
 
-	public void setProfilePhoto(String profilePhoto) {
-		this.profilePhoto = profilePhoto;
-	}
+    public void setEmploymentType(String employmentType) {
+        this.employmentType = employmentType;
+    }
 
-	public List<Skills> getSkills() {
-		return skills;
-	}
+    public String getResume() {
+        return resume;
+    }
 
-	public void setSkills(List<Skills> skills) {
-		this.skills = skills;
-	}
+    public void setResume(String resume) {
+        this.resume = resume;
+    }
 
-	@Override
-	public String toString() {
-		return "JobSeekerProfile [userAccountId=" + userAccountId + ", userId=" + userId + ", firstName=" + firstName
-				+ ", lastName=" + lastName + ", city=" + city + ", state=" + state + ", country=" + country
-				+ ", workAuthorization=" + workAuthorization + ", employmentType=" + employmentType + ", resume="
-				+ resume + ", profilePhoto=" + profilePhoto + ", skills=" + skills + "]";
-	}
-	
-		
+    public String getProfilePhoto() {
+        return profilePhoto;
+    }
 
+    public void setProfilePhoto(String profilePhoto) {
+        this.profilePhoto = profilePhoto;
+    }
+
+    public List<Skills> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<Skills> skills) {
+        this.skills = skills;
+    }
+
+    @Transient
+    public String getPhotosImagePath() {
+        if (profilePhoto == null || userAccountId == null) return null;
+        return "photos/candidate/" + userAccountId + "/" + profilePhoto;
+    }
+
+    @Override
+    public String toString() {
+        return "JobSeekerProfile{" +
+                "userAccountId=" + userAccountId +
+                ", userId=" + userId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", country='" + country + '\'' +
+                ", workAuthorization='" + workAuthorization + '\'' +
+                ", employmentType='" + employmentType + '\'' +
+                ", resume='" + resume + '\'' +
+                ", profilePhoto='" + profilePhoto + '\'' +
+                '}';
+    }
 }

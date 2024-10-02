@@ -58,14 +58,7 @@ public class RecruiterJobsDto {
 
 	public void setJobCompanyId(JobCompany jobCompanyId) {
 		this.jobCompanyId = jobCompanyId;
-	}
-
-	@Override
-	public String toString() {
-		return "RecruiterJobsDto [totalCandidates=" + totalCandidates + ", jobPostId=" + jobPostId + ", jobTitle="
-				+ jobTitle + ", jobLocationId=" + jobLocationId + ", jobCompanyId=" + jobCompanyId + "]";
-	}
-	
+	}	
 	
 
 }

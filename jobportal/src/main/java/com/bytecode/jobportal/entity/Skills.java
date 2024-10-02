@@ -15,11 +15,12 @@ public class Skills {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 	
 	private String name;
 	private String experienceLevel;
-	private String yearsOfEcperience;
+	private String years_of_experience;
+	
 	
 	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="job_seeker_profile")
@@ -29,22 +30,22 @@ public class Skills {
 		
 	}
 
-	public Skills(int id, String name, String experienceLevel, String yearsOfEcperience,
+	public Skills(Integer id, String name, String experienceLevel, String years_of_experience,
 			JobSeekerProfile jobSeekerProfile) {
 		this.id = id;
 		this.name = name;
 		this.experienceLevel = experienceLevel;
-		this.yearsOfEcperience = yearsOfEcperience;
+		this.years_of_experience = years_of_experience;
 		this.jobSeekerProfile = jobSeekerProfile;
 	}
 	
 	
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -64,12 +65,14 @@ public class Skills {
 		this.experienceLevel = experienceLevel;
 	}
 
-	public String getYearsOfEcperience() {
-		return yearsOfEcperience;
+	
+
+	public String getYears_of_experience() {
+		return years_of_experience;
 	}
 
-	public void setYearsOfEcperience(String yearsOfEcperience) {
-		this.yearsOfEcperience = yearsOfEcperience;
+	public void setYears_of_experience(String years_of_experience) {
+		this.years_of_experience = years_of_experience;
 	}
 
 	public JobSeekerProfile getJobSeekerProfile() {
@@ -82,8 +85,8 @@ public class Skills {
 
 	@Override
 	public String toString() {
-		return "Skills [id=" + id + ", name=" + name + ", experienceLevel=" + experienceLevel + ", yearsOfEcperience="
-				+ yearsOfEcperience + ", jobSeekerProfile=" + jobSeekerProfile + "]";
+		return "Skills [id=" + id + ", name=" + name + ", experienceLevel=" + experienceLevel + ", years_of_experience="
+				+ years_of_experience + ", jobSeekerProfile=" + jobSeekerProfile + "]";
 	}
 	
 	

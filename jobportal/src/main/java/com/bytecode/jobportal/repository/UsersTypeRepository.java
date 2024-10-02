@@ -8,6 +8,6 @@ import com.bytecode.jobportal.entity.UsersType;
 
 public interface UsersTypeRepository extends JpaRepository<UsersType,Integer> {
 
-	List<UsersType> findAll();
+//	List<UsersType> findAll();
 
 }
