@@ -1,6 +1,9 @@
 
 
-<=====Spring Boot Job Portal Project Description =====>
+=====Spring Boot Job Portal Project Description =====
+
+
+==========================================================================
 
 This project is a web-based job portal application developed using Spring Boot, JPA, Hibernate, and Thymeleaf.
 The application provides functionality for job seekers and recruiters to interact on a job search platform.
