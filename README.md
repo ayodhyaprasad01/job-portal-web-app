@@ -1,11 +1,12 @@
 
 
-<=====Spring Boot Job Portal Project Description ==================>
+<=====Spring Boot Job Portal Project Description =====>
 
 This project is a web-based job portal application developed using Spring Boot, JPA, Hibernate, and Thymeleaf.
 The application provides functionality for job seekers and recruiters to interact on a job search platform.
 
-Features===================================>
+Features========================>
+
 For Recruiters:
 •	Create and Post Jobs: Recruiters can create new job posts to attract job candidates.
 •	View Posted Jobs: Access a list of all job posts created by the recruiter.
@@ -32,7 +33,8 @@ Prerequisites
 
 
 
-Development Environment================================>
+Development Environment============>
+
 To set up the development environment, the following tools are recommended:
 •	IDE: IntelliJ or Eclipse.
 •	Database: MySQL Database Server and MySQL Workbench.
@@ -49,7 +51,8 @@ The application follows a standard Spring Boot MVC architecture:
 
 
 
-Database Entities  ========================================>
+Database Entities  =================>
+
 Key database entities include:
 •	JobCompany: Company information.
 •	JobPostActivity: Details of each job post.
@@ -58,7 +61,8 @@ Key database entities include:
 •	Skills: Skills associated with candidates.
 
 
-Getting Started  ==========================================>
+Getting Started  ================>
+
 1. Set Up Database
 1.	Create a MySQL user and database for the application.
 2.	Import the provided SQL scripts for initial setup.
@@ -80,6 +84,7 @@ Once the application is running, access it through a web browser at:
 http://localhost:8080
 
 
-Contributing  ========================================================>
+Contributing  ================>
+
 Feel free to contribute by reporting issues or submitting pull requests.
 
