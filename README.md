@@ -8,16 +8,16 @@ The application provides functionality for job seekers and recruiters to interac
 Features========================>
 
 For Recruiters:
-•	Create and Post Jobs: Recruiters can create new job posts to attract job candidates.
-•	View Posted Jobs: Access a list of all job posts created by the recruiter.
-•	Manage Candidates: View the list of candidates who have applied for specific jobs.
-•	Edit Profile: Update profile information, including uploading a profile photo.
+*	Create and Post Jobs: Recruiters can create new job posts to attract job candidates.
+*	View Posted Jobs: Access a list of all job posts created by the recruiter.
+*	Manage Candidates: View the list of candidates who have applied for specific jobs.
+*	Edit Profile: Update profile information, including uploading a profile photo.
 
 For Job Candidates:
-•	Job Search: Browse and search for available job listings.
-•	Apply for Jobs: Submit applications for jobs posted on the platform.
-•	Application Management: View the list of jobs that the candidate has applied to.
-•	Edit Profile: Update personal information and upload a resumé/CV.
+*	Job Search: Browse and search for available job listings.
+*	Apply for Jobs: Submit applications for jobs posted on the platform.
+*	Application Management: View the list of jobs that the candidate has applied to.
+*	Edit Profile: Update personal information and upload a resumé/CV.
 
 Common Features:
 •	User Registration: Register as either a recruiter or job candidate.
