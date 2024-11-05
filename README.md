@@ -20,15 +20,15 @@ For Job Candidates:
 *	Edit Profile: Update personal information and upload a resumé/CV.
 
 Common Features:
-•	User Registration: Register as either a recruiter or job candidate.
-•	Login/Logout: Secure login and logout functionality for all users.
+*	User Registration: Register as either a recruiter or job candidate.
+*	Login/Logout: Secure login and logout functionality for all users.
 
 Prerequisites
-•	Java: Prior experience with Java is recommended.
-•	Spring Boot: Knowledge of Spring Boot for building applications.
-•	JPA / Hibernate: Familiarity with ORM tools for managing database entities.
-•	Thymeleaf / HTML: Basic understanding of Thymeleaf for server-side rendering.
-•	Maven: For dependency management.
+*	Java: Prior experience with Java is recommended.
+*	Spring Boot: Knowledge of Spring Boot for building applications.
+*	JPA / Hibernate: Familiarity with ORM tools for managing database entities.
+*	Thymeleaf / HTML: Basic understanding of Thymeleaf for server-side rendering.
+*	Maven: For dependency management.
 
 
 
@@ -36,29 +36,29 @@ Prerequisites
 Development Environment============>
 
 To set up the development environment, the following tools are recommended:
-•	IDE: IntelliJ or Eclipse.
-•	Database: MySQL Database Server and MySQL Workbench.
+*	IDE: IntelliJ or Eclipse.
+*	Database: MySQL Database Server and MySQL Workbench.
 
 
 
 
 Project Architecture===>
 The application follows a standard Spring Boot MVC architecture:
-•	Controller Layer: Handles web requests.
-•	Service Layer: Implements business logic.
-•	Repository Layer: Accesses and manages the database.
-•	View Layer: Utilizes Thymeleaf templates for UI rendering.
+*	Controller Layer: Handles web requests.
+*	Service Layer: Implements business logic.
+*	Repository Layer: Accesses and manages the database.
+*	View Layer: Utilizes Thymeleaf templates for UI rendering.
 
 
 
 Database Entities  =================>
 
 Key database entities include:
-•	JobCompany: Company information.
-•	JobPostActivity: Details of each job post.
-•	JobSeekerProfile: Candidate profile details.
-•	RecruiterProfile: Recruiter profile details.
-•	Skills: Skills associated with candidates.
+*	JobCompany: Company information.
+*	JobPostActivity: Details of each job post.
+*	JobSeekerProfile: Candidate profile details.
+*	RecruiterProfile: Recruiter profile details.
+*	Skills: Skills associated with candidates.
 
 
 Getting Started  ================>
